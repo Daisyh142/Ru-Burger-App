@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Order_Sandwich"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/sandwichImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/sandwich"
+                android:contentDescription="@string/Order_Sandwich"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/breadLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_bread"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/sandwichImage"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <Spinner
+                android:id="@+id/breadSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/breadLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/proteinLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_protein"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/breadSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/proteinSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/proteinLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/addOnsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_ons"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/proteinSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addOnsContainer1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/addOnsLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/lettuceCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lettuce"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <CheckBox
+                    android:id="@+id/tomatoCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tomato"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/lettuceCheckbox"
+                    app:layout_constraintTop_toTopOf="@id/lettuceCheckbox"
+                    app:layout_constraintBottom_toBottomOf="@id/lettuceCheckbox"/>
+
+                <CheckBox
+                    android:id="@+id/onionsCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onions"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/tomatoCheckbox"
+                    app:layout_constraintTop_toTopOf="@id/tomatoCheckbox"
+                    app:layout_constraintBottom_toBottomOf="@id/tomatoCheckbox"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addOnsContainer2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/addOnsContainer1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/avocadoCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avocado"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <CheckBox
+                    android:id="@+id/cheeseCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cheese"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/avocadoCheckbox"
+                    app:layout_constraintTop_toTopOf="@id/avocadoCheckbox"
+                    app:layout_constraintBottom_toBottomOf="@id/avocadoCheckbox"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/quantityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_quantity"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/addOnsContainer2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <Spinner
+                android:id="@+id/quantitySpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/quantityLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/priceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_default"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/quantitySpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/addToCartButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Add_To_Cart"
+                app:layout_constraintTop_toBottomOf="@id/priceLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/clearOrderButton"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/clearOrderButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_order"
+                app:layout_constraintTop_toBottomOf="@id/priceLabel"
+                app:layout_constraintStart_toEndOf="@id/addToCartButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"/>
+
+            <Button
+                android:id="@+id/comboButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Order_Combo"
+                app:layout_constraintTop_toBottomOf="@id/addToCartButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cancelOrderButton"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/cancelOrderButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_order"
+                app:layout_constraintTop_toBottomOf="@id/clearOrderButton"
+                app:layout_constraintStart_toEndOf="@id/comboButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"/>
+
+            <Button
+                android:id="@+id/checkOutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#4CAF50"
+                android:text="@string/Check_Out"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/comboButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

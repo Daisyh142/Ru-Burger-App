@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".BurgerOrderActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Order_Burger"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <ImageView
+                android:id="@+id/burgerImage"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/burger"
+                android:contentDescription="@string/Order_Burger"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/selectBurgerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_burger"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/burgerImage"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/breadSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/selectBurgerLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/selectPattyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_patty"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/breadSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/pattyTypeRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/selectPattyLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/singlePattyRadio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/single_patty"
+                    android:checked="true"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/doublePattyRadio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/double_patty"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/addOnsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_ons"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/pattyTypeRadioGroup"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TableLayout
+                android:id="@+id/addOnsTable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/addOnsLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:stretchColumns="*">
+
+                <TableRow>
+                    <CheckBox
+                        android:id="@+id/lettuceCheckbox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lettuce"
+                        android:textSize="16sp"
+                        android:padding="8dp"/>
+
+                    <CheckBox
+                        android:id="@+id/tomatoCheckbox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tomato"
+                        android:textSize="16sp"
+                        android:padding="8dp"/>
+                </TableRow>
+
+                <TableRow>
+                    <CheckBox
+                        android:id="@+id/onionsCheckbox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/onions"
+                        android:textSize="16sp"
+                        android:padding="8dp"/>
+
+                    <CheckBox
+                        android:id="@+id/avacadoCheckbox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/avocado"
+                        android:textSize="16sp"
+                        android:padding="8dp"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/quantityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_quantity"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/addOnsTable"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/quantitySpinner"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/quantityLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/priceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_default"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/quantitySpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <Button
+                android:id="@+id/addToCartButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Add_To_Cart"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/priceLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/clearCancelRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/addToCartButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/clearOrderButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/clear_order"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/cancelOrderButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel_order"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/checkOutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#4CAF50"
+                android:text="@string/Check_Out"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clearCancelRow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

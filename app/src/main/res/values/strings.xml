@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">RU Burger</string>
+
+    <string name="title">RU Burger</string>
+    <string name="welcome_message">Welcome to RU Burger</string>
+    <string name="ru_burger">RU Burger</string>
+
+    <string name="Order_Burger">Order a Burger</string>
+    <string name="Order_Sandwich">Order a Sandwich</string>
+    <string name="Order_Side">Order a Side</string>
+    <string name="Order_Drink">Order a Drink</string>
+    <string name="Order_Combo">Order a Combo</string>
+    <string name="Check_Out">Check Out</string>
+
+    <string name="Add_To_Order">Add to Order</string>
+    <string name="Add_To_Cart">Add to Cart</string>
+    <string name="Order_Added">Order added to checkout.</string>
+    <string name="cancel_order">Cancel Order</string>
+
+    <string name="select_bread">Please select a bread option.</string>
+    <string name="select_burger">Please select a burger.</string>
+    <string name="select_flavor">Please select a flavor.</string>
+    <string name="select_drink">Please select a drink.</string>
+    <string name="select_size">Please select a size.</string>
+    <string name="select_protein">Please select a protein option.</string>
+    <string name="select_quantity">Please select a quantity.</string>
+    <string name="select_side">Choose Side:</string>
+
+    <string name="lettuce">Lettuce</string>
+    <string name="tomato">Tomato</string>
+    <string name="onions">Onions</string>
+    <string name="avocado">Avocado</string>
+    <string name="cheese">Cheese</string>
+    <string name="add_ons">Add-ons:</string>
+
+    <string name="single_patty">Single Patty</string>
+    <string name="double_patty">Double Patty</string>
+    <string name="select_patty">Please select a patty option.</string>"
+
+
+    <string name="flavor_image">Flavor Image</string>
+
+    <string name="Chips">Chips</string>
+    <string name="Fries">Fries</string>
+    <string name="Onion_Rings">Onion Rings</string>
+    <string name="Apple_Slices">Apple Slices</string>
+    <string name="Side_Image">Selected Side Image</string>
+
+    <string name="Small">Small</string>
+    <string name="Medium">Medium</string>
+    <string name="Large">Large</string>
+
+    <string name="burger_added_error">Error adding burger </string>
+    <string name="combo_selection_error">Error selecting combo: </string>
+    <string name="beverage_creation_error">Error creating beverage: </string>
+    <string name="incomplete_selection">Please Select an Item</string>
+    <string name="Side_added">Side added to order.</string>
+    <string name="Error">Error</string>
+
+    <string name="price_default">Price: $0.00</string>
+    <string name="subtotal_format">Subtotal: $%.2f</string>
+    <string name="tax_format">Tax (6.625%%): $%.2f</string>
+    <string name="total_format">Total: $%.2f</string>
+    <string name="order_number_format">Order #: %d</string>
+
+    <string name="subtotal_default">Subtotal: $0.00</string>
+    <string name="tax_default">Tax (6.625%): $0.00</string>
+    <string name="total_default">Order Total: $0.00</string>
+
+    <string name="current_order">Current Order</string>
+    <string name="order_items">Order Items:</string>
+    <string name="subtotal_label">Subtotal: $0.00</string>
+    <string name="tax">Tax (6.625%): $%.2f</string>
+    <string name="total">Total: $%.2f</string>
+
+    <string name="remove_item">Remove Item</string>
+    <string name="clear_cart">Clear Cart</string>
+    <string name="place_order">Place Order</string>
+    <string name="add_more_items">Add More Items</string>
+
+    <string name="item_removed">Item removed from order.</string>
+    <string name="no_selection_title">No Selection</string>
+    <string name="no_selection_message">Please select an item to remove.</string>
+    <string name="empty_cart_title">Empty Cart</string>
+    <string name="empty_cart_message">There are no items to remove.</string>
+    <string name="clear_order">Clear Order</string>
+    <string name="clear_cart_message">Are you sure you want to clear the cart?</string>
+    <string name="cart_cleared">Cart cleared successfully.</string>
+    <string name="cancel_order_title">Cancel Order</string>
+    <string name="cancel_order_message">Are you sure you want to cancel the entire order?</string>
+    <string name="order_canceled">Order canceled successfully.</string>
+    <string name="empty_order_title">Empty Order</string>
+    <string name="empty_order_message">There are no items to place.</string>
+    <string name="order_placed_title">Order Placed</string>
+    <string name="order_placed_message">Order #%d placed successfully!\nThank you for your order!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+
+    <string name="all_orders">All Orders</string>
+    <string name="order_list">Order List</string>
+    <string name="order_details">Order Details</string>
+    <string name="export_orders">Export Orders</string>
+    <string name="return_to_main">Return to Main Menu</string>
+
+</resources>
